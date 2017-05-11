@@ -1,0 +1,100 @@
+body{
+    font-family: 'Roboto',sans-serif;
+    background-color:#f4f4f4;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Quicksand',sans-serif;
+}
+
+.navbar-brand{
+    font-family: 'Quicksand',sans-serif;
+    font-size: 33px;
+}
+
+.brand-color{
+    color:#26a65b;
+}
+
+.navbar-nav > li > a{
+    font-family: 'Quicksand',sans-serif;
+    font-size: 18px;
+}
+
+.spinner{
+    display:none;
+    height:125px;
+    width:125px;
+    border-left:3px solid #26a65b;
+    border-radius: 100px;
+    animation: test 1.25s linear infinite;
+    z-index:1001;
+    position:absolute;
+    top:35%;
+    left:45%;
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: 10px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.submit-btn{
+    background-color: #26a65b;
+    font-family: 'Quicksand',sans-serif;
+    color: #fff;
+    border: 0;
+    transition: background-color 0.2s ease-in;
+}
+
+.submit-btn:hover{
+    background-color: lighten($primary, 10%)
+}
+
+.bg-animation{
+    animation: bg_animate 3s ease-in-out infinite;
+    -webkit-animation: bg_animate 0.7s linear infinite;
+}
+
+
+.hide{
+    display: none !important;
+}
+
+.show{
+    display: block !important;
+}
+
+.text-danger{
+    color:red;
+}
+
+@keyframes test{
+    0%{transform:rotate(0deg)}
+    50%{transform:rotate(360deg)}
+    100%{transform:rotate(720deg)}
+}
+
+@keyframes bg_animate{
+    0%{background-color: $primary}
+    15%{background-color: darken($primary,4%)}
+    30%{background-color: darken($primary,8%)}
+    45%{background-color: darken($primary,15%)}
+    60%{background-color: darken($primary,12%)}
+    75%{background-color: darken($primary,8%)}
+    90%{background-color: darken($primary,4%)}
+    100%{background-color: $primary}
+}
+
+@media all and (max-width:768px){
+    .spinner{
+        top:35%;
+        left:35%;
+    }
+}
