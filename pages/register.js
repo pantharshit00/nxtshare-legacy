@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Layout from '../components/Layout';
+import Layout from '../components/guest/Layout';
 import Input from '../components/InputField';
 import Reveal from '../components/ScrollReveal';
 import fetch from 'isomorphic-unfetch';
@@ -163,16 +163,23 @@ class Register extends Component {
             this.setState({
                 error: 'Please enter a correct email'
             });
+            $('[name="email"]').focus();
         }
         else if (!(password == password2)) {
             this.setState({
                 error: 'Passwords do not match'
             });
+            $('[name="password"]').val('');
+            $('[name="password2"]').val('');
+            $('[name="password"]').focus();
         }
         else if (password.length < 8) {
             this.setState({
                 error: 'Password must be 8 characters long'
             });
+            $('[name="password"]').val('');
+            $('[name="password2"]').val('');
+            $('[name="password"]').focus();
         }
         else {
             const date = new Date(dd + ' ' + mm + ' ' + yy).toISOString();

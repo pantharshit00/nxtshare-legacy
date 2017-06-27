@@ -1,0 +1,40 @@
+.navbar{
+    @extend .card;
+    height: 65px;
+    background-color: #fff;
+}
+
+.navbar-brand{
+    @extend .brand;
+    font-size:44px;
+    padding-top: 4px;
+    text-align: center;
+    margin-top: -54px;
+}
+
+.sidenaving{
+    width: 100%;
+    height: 100%;
+    margin-left: -13px
+}
+
+.sidenav{
+    list-style: none;
+    padding: 0;
+    margin-top:3px;
+}
+
+.side-nav-item{
+    font-size: 18px;
+    padding: 7px 0 3px 0;
+    text-align: center;
+}
+
+.sidenav a{
+    color: #000;
+    text-decoration: none;
+}
+
+.side-nav-item:hover{
+    background-color: #f2f2f2;
+}

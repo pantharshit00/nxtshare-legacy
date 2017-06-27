@@ -16,4 +16,4 @@ class Dashboard extends React.Component {
     }
 }
 
-export default withAuth(Dashboard,'/protected'); 
+export default withAuth(Dashboard); 

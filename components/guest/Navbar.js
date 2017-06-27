@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Navlink from './Navlink';
-import Reveal from './ScrollReveal';
+import Navlink from '../Navlink';
+import Reveal from '../ScrollReveal';
 
 class Navbar extends Component {
     render() {
         const homeActiveClass = this.props.path == '/' ? 'active' : '';
         const loginActiveClass = this.props.path == '/login' ? 'active' : '';
-        const registerActiveClass = this.props.path == '/register' ? 'active' : '';
+        const registerActiveClass = this.props.path == '/register' ? 'active':'';
         return (
             <Reveal sid="nnavbar" origin="left" duration={1200}>
                 <nav className="navbar navbar-inverse">

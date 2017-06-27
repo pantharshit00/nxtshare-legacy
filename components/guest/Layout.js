@@ -32,7 +32,7 @@ class Layout extends Component {
             <div>
                 <Head>
                     <meta name="viewport" content="width=device-width" />
-                    <link rel="stylesheet" href="/static/css/style.css" />
+                    <link rel="stylesheet" href="/static/css/guest.css" />
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.23.0/polyfill.min.js"></script>
                     <link href="https://fonts.googleapis.com/css?family=Quicksand:500|Roboto" rel="stylesheet" />
                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

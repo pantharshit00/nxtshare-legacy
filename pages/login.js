@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../components/Layout';
+import Layout from '../components/guest/Layout';
 import Input from '../components/InputField';
 import Reveal from '../components/ScrollReveal';
 import AuthService from '../lib/authService';
@@ -16,6 +16,7 @@ class Login extends React.Component {
         super(props);
         this.state = {
             error: props.error,
+            msg: props.msg,
             email: null,
             password: null
         };
@@ -25,6 +26,9 @@ class Login extends React.Component {
         if (props.query.next !== undefined) {
             return { error: 'Login in order to continue' };
         }
+        else if(props.query.msg !== undefined){
+            return {msg: props.query.msg};
+        }
         else {
             return {};
         }
@@ -32,6 +36,7 @@ class Login extends React.Component {
 
     render() {
         const errorMarkup = <div className="alert alert-danger"><span className='glyphicon glyphicon-exclamation-sign' />&nbsp; {this.state.error}</div>;
+        const msgMarkup = <div className="alert alert-success"><span className='glyphicon glyphicon-exclamation-sign' />&nbsp; {this.state.msg}</div>;
         return (
             <div>
                 <Head>
@@ -46,6 +51,7 @@ class Login extends React.Component {
                                         <h2>Login</h2>
                                         <hr />
                                         {this.state.error ? errorMarkup : ''}
+                                        {this.state.msg ? msgMarkup : ''}
                                         <form onSubmit={this._handleSubmit.bind(this)}>
                                             <Input
                                                 name="Email"
